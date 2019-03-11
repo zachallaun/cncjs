@@ -390,7 +390,6 @@ class AxesWidget extends PureComponent {
                 return;
             }
 
-            const distance = Math.min(this.actions.getJogDistance(), 1);
             const feedrateMin = this.config.get('shuttle.feedrateMin');
             const feedrateMax = this.config.get('shuttle.feedrateMax');
             const hertz = this.config.get('shuttle.hertz');
@@ -398,7 +397,6 @@ class AxesWidget extends PureComponent {
 
             this.shuttleControl.accumulate(zone, {
                 axis: jog.axis,
-                distance: distance,
                 feedrateMin: feedrateMin,
                 feedrateMax: feedrateMax,
                 hertz: hertz,

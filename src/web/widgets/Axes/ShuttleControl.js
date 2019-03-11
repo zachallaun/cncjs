@@ -16,7 +16,7 @@ class ShuttleControl extends events.EventEmitter {
     queue = [];
     timer = null;
 
-    accumulate(zone = 0, { axis = '', distance = 1, feedrateMin, feedrateMax, hertz, overshoot }) {
+    accumulate(zone = 0, { axis = '', feedrateMin, feedrateMax, hertz, overshoot }) {
         zone = Number(zone) || 0;
         axis = ('' + axis).toUpperCase();
         feedrateMin = Number(feedrateMin) || DEFAULT_FEEDRATE_MIN;
@@ -33,7 +33,7 @@ class ShuttleControl extends events.EventEmitter {
         const zoneMax = 7; // Shuttle Zone +7/-7
         const zoneMin = 1; // Shuttle Zone +1/-1
         const direction = (zone < 0) ? -1 : 1;
-        const feedrate = ((feedrateMax - feedrateMin) * distance * ((Math.abs(zone) - zoneMin) / (zoneMax - zoneMin))) + feedrateMin;
+        const feedrate = ((feedrateMax - feedrateMin) * ((Math.abs(zone) - zoneMin) / (zoneMax - zoneMin))) + feedrateMin;
         const relativeDistance = direction * overshoot * (feedrate / 60.0) / hertz;
 
         this.zone = zone;
