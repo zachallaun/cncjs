@@ -34,7 +34,7 @@ const defaultState = {
             jog: {
                 keypad: false,
                 imperial: {
-                    step: IMPERIAL_STEPS.indexOf(1), // Defaults to 1 inch
+                    step: IMPERIAL_STEPS.indexOf(0.1), // Defaults to 0.1 inch
                     distances: []
                 },
                 metric: {
