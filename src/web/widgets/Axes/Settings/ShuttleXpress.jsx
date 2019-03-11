@@ -4,7 +4,7 @@ import React, { PureComponent } from 'react';
 import i18n from 'web/lib/i18n';
 import { FormGroup } from 'web/components/Forms';
 
-const FEEDRATE_RANGE = [100, 2500];
+const FEEDRATE_RANGE = [100, 5000];
 const FEEDRATE_STEP = 50;
 const OVERSHOOT_RANGE = [1, 1.5];
 const OVERSHOOT_STEP = 0.01;
