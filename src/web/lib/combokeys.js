@@ -79,6 +79,22 @@ const commandKeys = [
         },
         preventDefault: true
     },
+    { // Select Jog Distance (Jog Wheel)
+        keys: ['ctrl', 'alt', 'command', 'shift', '['].join('+'),
+        cmd: 'JOG_LEVER_SWITCH',
+        payload: {
+            key: '-'
+        },
+        preventDefault: true
+    },
+    { // Select Jog Distance (Jog Wheel)
+        keys: ['ctrl', 'alt', 'command', 'shift', ']'].join('+'),
+        cmd: 'JOG_LEVER_SWITCH',
+        payload: {
+            key: '+'
+        },
+        preventDefault: true
+    },
     { // Jog Forward
         keys: ['ctrl', 'alt', 'command', ']'].join('+'),
         cmd: 'JOG',
